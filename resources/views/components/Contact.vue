@@ -93,14 +93,12 @@
 
                 xhr.onload = () => {
                     if (xhr.status === 201) {
-                        if (xhr.status === 201) {
-                            this.handleSuccessfulSubmit();
-                        } else if (xhr.status === 422) {
-                            const errors = JSON.parse(xhr.responseText).errors;
-                            this.handleErrors(errors);
-                        } else {
-                            console.log('An unknown error has occurred.');
-                        }
+                        this.handleSuccessfulSubmit();
+                    } else if (xhr.status === 422) {
+                        const errors = JSON.parse(xhr.responseText).errors;
+                        this.handleErrors(errors);
+                    } else {
+                        console.log('An unknown error has occurred.');
                     }
                 }
 
