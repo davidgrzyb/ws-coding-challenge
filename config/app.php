@@ -125,6 +125,19 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Notification Recipient
+    |--------------------------------------------------------------------------
+    |
+    | This configures where the notifications of new inquiries will be sent.
+    |
+    */
+
+    'notification_recipient' => [
+        'email' => env('NOTIFICATION_RECIPIENT'),
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
     | Autoloaded Service Providers
     |--------------------------------------------------------------------------
     |
