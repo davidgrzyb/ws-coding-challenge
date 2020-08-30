@@ -226,15 +226,13 @@ __webpack_require__.r(__webpack_exports__);
 
       xhr.onload = function () {
         if (xhr.status === 201) {
-          if (xhr.status === 201) {
-            _this.handleSuccessfulSubmit();
-          } else if (xhr.status === 422) {
-            var errors = JSON.parse(xhr.responseText).errors;
+          _this.handleSuccessfulSubmit();
+        } else if (xhr.status === 422) {
+          var errors = JSON.parse(xhr.responseText).errors;
 
-            _this.handleErrors(errors);
-          } else {
-            console.log('An unknown error has occurred.');
-          }
+          _this.handleErrors(errors);
+        } else {
+          console.log('An unknown error has occurred.');
         }
       };
 
